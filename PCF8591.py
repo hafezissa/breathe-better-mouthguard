@@ -22,7 +22,7 @@ import time
 # for RPI version 1, use "bus = smbus.SMBus(0)"
 bus = smbus.SMBus(1)
 
-#check your PCF8591 address by type in 'sudo i2cdetect -y -1' in terminal.
+# check your PCF8591 address by type in 'sudo i2cdetect -y -1' in terminal.
 def setup(Addr):
 	global address
 	address = 72
@@ -40,7 +40,6 @@ def read(chn): #channel
 		bus.read_byte(address) # dummy read to start conversion
 	except (Exception):
 		print ("Address: %s" % address)
-##		print (e)
 	return bus.read_byte(address)
 
 def write(val):
@@ -51,7 +50,6 @@ def write(val):
 		bus.write_byte_data(address, 0x40, temp)
 	except (Exception):
 		print ("Error: Device address: 0x%2X" % address)
-##		print (e)
 
 if __name__ == "__main__":
 	setup(0x48)
@@ -61,4 +59,3 @@ if __name__ == "__main__":
 		tmp = read(0)
 		tmp = tmp*(255-125)/255+125 # LED won't light up below 125, so convert '0-255' to '125-255'
 		write(tmp)
-#		time.sleep(0.3)
