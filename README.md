@@ -12,7 +12,7 @@ This 6-week project is composed of a *high-fidelity*  prototype (3D-printed mout
 The computing prototype makes use of a button and an MQ2 gas sensor which is suitable to measure liquid petroleum gas (LPG) , Hydrogen gas, methane, carbon monoxide, alcohol, smoke and propane. This sensor, although unable to detect CO2, works in a similar manner as a CO2 gas sensor. Gas sensors in general, sense changes in conductivity as concentrations increase. This is then converted as a voltage output by an analog-to-digital converter. The decision to use a gas sensor in place of CO2 specific gas sensor was to test for the computational prototype while simulating the real test. A sensor would register concentrations in an expelled breath and provide an output, in the form of a color coded graph, that displays whether these concentrations are in a normal range, slightly outside of the normal range, or well exceeding. The device only outputs its readings when a pressure sensor experiences the force of a user biting down. The test plan accounts for several scenarios, which both test the functionality of the program and those that are likely to occur with use. 
 
 ## Application ..
-Test plan runs as follows, 5 scenarios --> each with a combination of triggering the pressure sensor and varying amounts of carbon dioxide expelled by breathing.
+Test plan runs as follows, 4 scenarios --> each with a combination of triggering the pressure sensor and varying amounts of carbon dioxide expelled by breathing.
 
 | Test Number |   Description  | Graphical Output |
 | -- | -- | -- |
